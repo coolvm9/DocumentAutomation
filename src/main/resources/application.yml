@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: DocProcessingApp
+
+vault:
+  uri: "http://vault-server:8200"
+  role-id: "your-role-id"
+  secret-id: "your-secret-id"
+
+gcp:
+  project-id: "your-gcp-project"
+  docai:
+    processor-id: "your-processor-id"
+  vertexai:
+    model: "gemini-pro"
