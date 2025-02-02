@@ -12,14 +12,22 @@ repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom 'com.google.cloud:libraries-bom:26.53.0'
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.vault:spring-vault-core'
-    implementation 'org.springframework.cloud:spring-cloud-gcp-starter'
+    implementation 'org.springframework.vault:spring-vault-core:3.1.2'
+    // https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter
+//    implementation 'com.google.cloud:spring-cloud-gcp-starter:5.10.0'
+
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
-    implementation 'com.google.cloud:google-cloud-storage:2.5.0'
-    implementation 'com.google.cloud:google-cloud-vision:2.5.0'
+    implementation 'com.google.cloud:google-cloud-storage'
+    implementation 'com.google.cloud:google-cloud-vision'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

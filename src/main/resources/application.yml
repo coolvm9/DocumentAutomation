@@ -16,3 +16,5 @@ gcp:
     processor-id: "your-processor-id"
   vertexai:
     model: "gemini-pro"
+  storage:
+    bucket: "your-bucket-name"
